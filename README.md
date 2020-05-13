@@ -1,7 +1,7 @@
 ## PWA Budget Tracker
 Budget tracker with off-line tracking capability
 
-<img src = "pwa-budget-pic.jpg" alt ="app picture" width ="60"/>        
+<img src = "pwa-budget-pic.jpg" alt ="app picture" />        
 
 ## Description
 This application adds off-line capability using manifests and service workers.
