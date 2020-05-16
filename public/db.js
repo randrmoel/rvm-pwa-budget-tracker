@@ -15,7 +15,7 @@ request.onsuccess = function (event) {
 };
 
 request.onerror = function (event) {
-    console.log("Woops!", event.target.errorCode);
+    console.log("Error triggered!", event.target.errorCode);
 };
 
 function saveRecord(record) {
@@ -49,5 +49,11 @@ function checkDatabase() {
         }
     };
 }
+
+function deletePending() {
+    const transaction = db.transaction(["pending"], "readwrite");
+    const store = transaction.objectStore("pending");
+    store.clear();
+  }
 
 window.addEventListener("online", checkDatabase);
